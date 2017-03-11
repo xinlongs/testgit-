@@ -1,0 +1,13 @@
+
+ void Receive_String_3()
+{
+ Serial.begin(9600);
+ char terminator = '}'; 
+ if(Serial.available()>0)
+ {
+  if (Serial.find("{"))
+   {
+    comdata = Serial.readStringUntil(terminator);
+    Serial.end();
+    }
+ }
